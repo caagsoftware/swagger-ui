@@ -1,14 +1,14 @@
-/* Google Font's Droid Sans */
+/* Google Font's Proximanova */
 @font-face {
-  font-family: 'Droid Sans';
+  font-family: 'Proximanova';
   font-style: normal;
   font-weight: 400;
-  src: local('Droid Sans'), local('DroidSans'), url('../fonts/proximanova-light-webfont.ttf') format('truetype');
+  src: local('Proximanova light'), local('Proximanova-Light'), url('../fonts/proximanova-light-webfont.ttf') format('truetype');
 }
-/* Google Font's Droid Sans Bold */
+/* Google Font's Proximanova Bold */
 @font-face {
-  font-family: 'Droid Sans';
+  font-family: 'Proximanova';
   font-style: normal;
   font-weight: 700;
-  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url('../fonts/proximanova-semibold-webfont.ttf') format('truetype');
+  src: local('Proximanova Semi Bold'), local('Proximanova-Semi-Bold'), url('../fonts/proximanova-semibold-webfont.ttf') format('truetype');
 }
