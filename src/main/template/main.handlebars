@@ -20,7 +20,36 @@
     <p> generated_token = <b>tenant_token:user_token</b>
     <p> Authorization = Basic generated_token </p>
 
-    <p> You can encode it in base64 on this website <a href="https://www.base64encode.org/"> https://www.base64encode.org/ </a></p> <hr>
+    <p> You can encode it in base64 on this website <a href="https://www.base64encode.org/"> https://www.base64encode.org/ </a></p> 
+    <p> Depending on the region where the servers are hosted, we have the following API endpoints: </p>
+
+    <ul>
+      <li>
+        <b>America:</b> https://api.caagcrm.com/api
+      </li>
+      <li>
+        <b>Europe:</b> https://api-asia.caagcrm.com/api-asia
+      </li>
+      <li>
+        <b>Asia:</b> https://api-europe.caagcrm.com/api-europe
+      </li>
+    </ul>
+    <br>
+    <p> Please contact us to confirm the region of your installation </p>
+
+    <ul>
+      <li>
+        If your domain to access the platform ends with hqrentals.app or caagcrm.com, your region is <b> America </b>
+      </li>
+      <li>
+        If your domain to access the platform ends with hqrentals.eu, your region is <b> Europe </b>
+      </li>
+      <li>
+        If your domain to access the platform ends with hqrentals.asia, your region is <b> Asia </b>
+      </li>
+    </ul>
+
+    <hr>
   </div>
   {{#if info.contact.name}}<br><div><div class='info_name' style="display: inline" data-sw-translate>Created by </div> {{{escape info.contact.name}}}</div>{{/if}}
   {{#if info.contact.url}}<div class='info_url' data-sw-translate>See more at <a href="{{{escape info.contact.url}}}">{{{escape info.contact.url}}}</a></div>{{/if}}
