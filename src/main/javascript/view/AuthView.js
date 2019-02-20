@@ -28,6 +28,7 @@ SwaggerUi.Views.AuthView = Backbone.View.extend({
         this.options = opts || {};
         opts.data = opts.data || {};
         this.router = this.options.router;
+        opts.data.MyHeaderAuthentication.type = 'oauth2';
 
         this.authsCollectionView = new SwaggerUi.Views.AuthsCollectionView({data: opts.data});
 
@@ -68,12 +69,14 @@ SwaggerUi.Views.AuthView = Backbone.View.extend({
                     auth.get('in')
                 );
 
+                console.log(auth.get('title'));
                 this.router.api.clientAuthorizations.add(auth.get('title'), keyAuth);
             } else if (type === 'basic') {
+                console.log(auth.get('title'));
                 basicAuth = new SwaggerClient.PasswordAuthorization(auth.get('username'), auth.get('password'));
                 this.router.api.clientAuthorizations.add(auth.get('title'), basicAuth);
             } else if (type === 'oauth2') {
-                this.handleOauth2Login(auth);
+                window.swaggerUi.api.clientAuthorizations.add('MyCustomHeader', new SwaggerClient.ApiKeyAuthorization('Authorization', 'Basic ' + btoa(auth.get('clientId') + ':' + auth.get('clientSecret')), 'header'));
             }
         }, this);
 
