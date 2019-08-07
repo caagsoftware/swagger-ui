@@ -44,7 +44,10 @@
                 $('div.info_title').html('HQ Rental Software API');
                 $(document).prop('title', 'HQ Rental Software API');
                 $('#auth_container').remove();
-                $('.logo__img').attr('src', 'https://hqrentalsoftware.com/wp-content/uploads/2019/05/cropped-HQ-Favicon-og-min-32x32.png');
+                $('.logo__img')
+                    .removeAttr('height')
+                    .removeAttr('width')
+                    .attr('src', 'https://rentals.caagcrm.com/assets/img/logos/hq-new.png');
             } else {
                 url = 'https://caag.caagcrm.com/api-docs';
             }
