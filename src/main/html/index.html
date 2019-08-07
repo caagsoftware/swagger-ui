@@ -41,7 +41,8 @@
             } else if (window.location.href.startsWith('https://api-docs.hqrentalsoftware.com')) {
                 url = 'https://caag.caagcrm.com/api-docs/car-rental';
                 $('#header').css('background-color', '#ffc613');
-                $('.info_title').text('HQ Rental Software API');
+                $('div.info_title').text('HQ Rental Software API');
+                $('#auth_container').remove();
             } else {
                 url = 'https://caag.caagcrm.com/api-docs';
             }
