@@ -27,29 +27,22 @@
     <script src='lib/marked.js' type='text/javascript'></script>
     <script src='lib/swagger-oauth.js' type='text/javascript'></script>
 
-    <!-- Some basic translations -->
-    <!-- <script src='lang/translator.js' type='text/javascript'></script> -->
-    <!-- <script src='lang/ru.js' type='text/javascript'></script> -->
-    <!-- <script src='lang/en.js' type='text/javascript'></script> -->
-
     <script type="text/javascript">
         $(function () {
             var url = window.location.search.match(/url=([^&]+)/);
-            console.log(url, window.location.href);
-            if (url && url.length > 1) {
-                url = decodeURIComponent(url[1]);
+            if (window.location.href.startsWith('https://api-docs.caagcrm.com')) {
+                url = 'https://caag.caagcrm.com/api-docs';
+            } else if (window.location.href.startsWith('https://api-docs.hqrentals.eu')) {
+                url = 'https://caag-europe.caagcrm.com/api-docs';
+            } else if (window.location.href.startsWith('https://api-docs.hqrentals.asia')) {
+                url = 'https://caag-asia.caagcrm.com/api-docs';
+            } else if (window.location.href.startsWith('https://api-docs.hqrentals.app')) {
+                url = 'https://caag-america-2.caagcrm.com/api-docs';
+            } else if (window.location.href.startsWith('https://api-docs.hqrentalsoftware.com')) {
+                url = 'https://caag.caagcrm.com/api-docs/car-rental';
+                $('#header').css('background-color', '#ffc613');
             } else {
-                if (window.location.href.startsWith('https://api-docs.caagcrm.com')) {
-                    url = "https://caag.caagcrm.com/api-docs";
-                } else if (window.location.href.startsWith('https://api-docs.hqrentals.eu')) {
-                    url = "https://caag-europe.caagcrm.com/api-docs";
-                } else if (window.location.href.startsWith('https://api-docs.hqrentals.asia')) {
-                    url = "https://caag-asia.caagcrm.com/api-docs";
-                } else if (window.location.href.startsWith('https://api-docs.sa.hqrentals.app')) {
-                    url = "https://caag-sa.caagcrm.com/api-docs";
-                } else {
-                    url = "https://caag.caagcrm.com/api-docs";
-                }
+                url = 'https://caag.caagcrm.com/api-docs';
             }
 
             hljs.configure({
