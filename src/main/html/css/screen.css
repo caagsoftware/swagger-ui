@@ -1354,6 +1354,9 @@
   padding-bottom: 10px;
   padding-left: 20px;
 }
+.swagger-section .swagger-ui-wrap a {
+  color: #0F6AB4;
+}
 .swagger-section .access {
   float: right;
 }
