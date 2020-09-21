@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <title>Caag Software API Documentation</title>
   <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
-  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32"/>
-  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16"/>
+
+  <link rel="icon" type="image/png" id="favicon-32" href="./images/caag/favicon-32x32.png" sizes="32x32"/>
+  <link rel="icon" type="image/png" id="favicon-16" href="./images/caag/favicon-16x16.png" sizes="16x16"/>
+
   <style>
     html {
       box-sizing: border-box;
@@ -130,6 +132,8 @@
     if (window.location.href.includes('api-docs.hqrentalsoftware.com')) {
       document.title = 'HQ Rental Software API Documentation';
       $('.swagger-ui .topbar').css('background-color', '#ffc613');
+      $('#favicon-16').href('./images/hq/favicon-16x16.png');
+      $('#favicon-32').href('./images/hq/favicon-32x32.png');
       url = 'https://caag.caagcrm.com/api-docs/car-rental';
     }
 
