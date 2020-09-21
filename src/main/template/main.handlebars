@@ -7,68 +7,6 @@
   <a href="{{{escape externalDocs.url}}}" target="_blank">{{{escape externalDocs.url}}}</a>
   {{/if}}
   {{#if info.termsOfServiceUrl}}<div class="info_tos"><a target="_blank" href="{{{escape info.termsOfServiceUrl}}}" data-sw-translate>Terms of service</a></div>{{/if}}
-  <div>
-    <b><h2>Authentication</h2></b>
-    <p>For authentication, you will need to use the following tokens:</p>
-
-    <b>Tenant Token:</b> it's the token that identifies your company in the system. <br>
-    <b>User Token:</b> it's the token that identifies the user with the API. <br> <br>
-
-    <p> To authenticate with the API you have to generate and send in the header of the request an <b>Authentication Token</b>. 
-          To generate the authentication token you have to encode in base 64 the Tenant Token and User Token as it follows:</p>
-
-    <p> generated_token = <b>tenant_token:user_token</b>
-    <p> Authorization = Basic generated_token </p>
-
-    <p> You can encode it in base64 on this website <a href="https://www.base64encode.org/"> https://www.base64encode.org/ </a></p> 
-    <p> Depending on the region where the servers are hosted, we have the following API endpoints: </p>
-
-    <ul>
-      <li>
-        <b>America:</b> https://api.caagcrm.com/api/
-      </li>
-      <li>
-        <b>America 2:</b> https://api-america-2.caagcrm.com/api-america-2/
-      </li>
-      <li>
-        <b>America West:</b> https://api-america-west.caagcrm.com/api-america-west/
-      </li>
-      <li>
-        <b>America Miami:</b> https://api-america-miami.caagcrm.com/api-america-miami/
-      </li>
-      <li>
-        <b>Europe:</b> https://api-europe.caagcrm.com/api-europe/
-      </li>
-      <li>
-        <b>Asia:</b> https://api-asia.caagcrm.com/api-asia/
-      </li>
-    </ul>
-    <br>
-    <p> Please contact us to confirm the region of your installation </p>
-
-    <ul>
-      <li>
-        If your domain to access the platform ends with caagcrm.com, your region is <b> America </b>
-      </li>
-      <li>
-        If your domain to access the platform ends with hqrentals.app, your region is <b> America 2 </b>
-      </li>
-      <li>
-        If your domain to access the platform ends with us3.hqrentals.app, your region is <b> America West </b>
-      </li>
-      <li>
-        If your domain to access the platform ends with us4.hqrentals.app, your region is <b> America Miami </b>
-      </li>
-      <li>
-        If your domain to access the platform ends with hqrentals.eu, your region is <b> Europe </b>
-      </li>
-      <li>
-        If your domain to access the platform ends with hqrentals.asia, your region is <b> Asia </b>
-      </li>
-    </ul>
-
-    <hr>
-  </div>
   {{#if info.contact.name}}<br><div><div class='info_name' style="display: inline" data-sw-translate>Created by </div> {{{escape info.contact.name}}}</div>{{/if}}
   {{#if info.contact.url}}<div class='info_url' data-sw-translate>See more at <a href="{{{escape info.contact.url}}}">{{{escape info.contact.url}}}</a></div>{{/if}}
   {{#if info.contact.email}}<div class='info_email'><a target="_parent" href="mailto:{{{escape info.contact.email}}}?subject={{{escape info.title}}}" data-sw-translate>Contact the developer</a></div>{{/if}}
