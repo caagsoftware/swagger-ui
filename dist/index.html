@@ -131,7 +131,6 @@
     var url = 'https://caag.caagcrm.com/api-docs';
     if (window.location.href.includes('api-docs.hqrentalsoftware.com')) {
       document.title = 'HQ Rental Software API Documentation';
-      $('.topbar').css('background-color', '#ffc613');
       $('#favicon-16').attr('href', './images/hq/favicon-16x16.png');
       $('#favicon-32').attr('href', './images/hq/favicon-32x32.png');
       url = 'https://caag.caagcrm.com/api-docs/car-rental';
@@ -151,6 +150,7 @@
       layout: "StandaloneLayout",
       onComplete: function () {
         $('#temp-styles').remove();
+        $('.topbar').css('background-color', '#ffc613');
         $('.topbar').find('img').attr('src', './images/caag.png').removeAttr('alt');
         if (window.location.href.includes('api-docs.hqrentalsoftware.com')) {
           $('.topbar').find('img').attr('src', './images/hq.png');
