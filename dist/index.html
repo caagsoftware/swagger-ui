@@ -58,8 +58,8 @@
 
 <div id="temp-styles">
   <style>
-    .topbar-wrapper {
-      display: none !important;
+    .swagger-ui {
+      display: none;
     }
   </style>
 </div>
@@ -149,13 +149,13 @@
       ],
       layout: "StandaloneLayout",
       onComplete: function () {
-        $('#temp-styles').remove();
         $('.topbar').find('img').attr('src', './images/caag.png').removeAttr('alt');
         if (window.location.href.includes('api-docs.hqrentalsoftware.com')) {
           $('.topbar').find('img').attr('src', './images/hq.png');
           $('.topbar').css('background-color', '#ffc613');
         }
         $('.information-container').find('.info').html($('#content-for-header').html());
+        $('#temp-styles').remove();
       }
     })
     window.ui = ui
